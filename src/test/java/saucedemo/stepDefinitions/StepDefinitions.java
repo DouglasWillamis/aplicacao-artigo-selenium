@@ -64,7 +64,9 @@ public class StepDefinitions {
 
         assertThat("your cart", is(carrinhoPage.obterTextoTitulo()));
         assertThat("sauce labs backpack", is(carrinhoPage.obterNomeDoProduto(sauceLabsBackPack)));
+        assertThat("$29.99", is(carrinhoPage.obterPrecoDoProduto(sauceLabsBackPack)));
         assertThat("sauce labs bolt t-shirt", is(carrinhoPage.obterNomeDoProduto(sauceLabesBoltTShitr)));
+        assertThat("$15.99", is(carrinhoPage.obterPrecoDoProduto(sauceLabesBoltTShitr)));
     }
 
     @E("realizo o checkout")

@@ -33,6 +33,11 @@ final public class CarrinhoPage extends PageObject {
         return nomeProduto.getText().toLowerCase();
     }
 
+    public String obterPrecoDoProduto(int index) {
+        WebElement precoProduto = this.produtos.get(index).findElement(By.className("inventory_item_price"));
+        return precoProduto.getText();
+    }
+
     public CheckoutInformacoesPage irParaCheckout() {
         this.checkoutButao.click();
         return new CheckoutInformacoesPage(this.driver, this.wait);

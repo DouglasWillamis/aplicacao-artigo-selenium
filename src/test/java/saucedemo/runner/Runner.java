@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/saucedemo/resources/feature",
         glue = "saucedemo/stepDefinitions",
-        plugin = "pretty",
+        plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
         monochrome = true,
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
